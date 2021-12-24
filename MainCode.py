@@ -8,7 +8,7 @@ class Date(object):
 
 class KhoHang:
 	"""docstring for KhoHang"""
-	def __init__(self, maKhoHang=None, tenKhoHang=None, diaDiem=None, taiTrong=None, loaiHHoa=None, dateNhapHang=None, dateXuatHang=None, taiTrongNhap=None):
+	def __init__(self, maKhoHang, tenKhoHang, diaDiem, taiTrong, loaiHHoa, dateNhapHang, dateXuatHang, taiTrongNhap):
 		self.maKhoHang = maKhoHang
 		self.tenKhoHang = tenKhoHang
 		self.diaDiem = diaDiem
@@ -21,8 +21,8 @@ class KhoHang:
 
 class Node:
 	"""docstring for Node"""
-	def __init__(self, data=None, next=None):
+	def __init__(self, data, next):
 		self.data = data
-		self.next = next
+		self.next = None
 
 		
