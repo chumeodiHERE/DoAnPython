@@ -1,4 +1,4 @@
-class Date(object):
+class Date:
 	"""docstring for Date"""
 	def __init__(self, ngay, thang, nam):
 		self.ngay = ngay
@@ -30,6 +30,9 @@ class list:
 	def __init__(self):
 		self.head = None
 		self.tail = None
+	
+	def inDS(self):
+		pass
 		
 
 		
