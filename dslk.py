@@ -1,3 +1,7 @@
+head = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^10}|{:^15}|{:^15}|{:^20}|".format(
+    "MA KHO", "TEN KHO", "DIA DIEM", "TAI TRONG(KG)", "LOAI", "DATE NHAP", "DATE XUAT", "TAI TRONG NHAP(KG)"
+)
+
 class Date:
 	"""docstring for Date"""
 	def __init__(self, ngay, thang, nam):
@@ -13,11 +17,15 @@ class KhoHang:
 		self.maKhoHang = maKhoHang
 		self.tenKhoHang = tenKhoHang
 		self.diaDiem = diaDiem
-		self.taiTrong = int(taiTrong)
+		self.taiTrong = float(taiTrong)
 		self.loaiHHoa = loaiHHoa
 		self.dateNhapHang = Date(dateNhapHang)
 		self.dateXuatHang = Date(dateXuatHang)
-		self.taiTrongNhap = int(taiTrongNhap)
+		self.taiTrongNhap = float(taiTrongNhap)
+	#def
+
+	def __str__(self):
+		pass
 	#def
 		
 
@@ -38,6 +46,18 @@ class list:
 	def inDanhSach(self):
 		pass
 	#def
+
+	def themKhoHang(self, data):	#Thêm Kho hàng từ bàn phím
+		newNode = Node(data)
+		if self.head == None:
+			self.head = newNode
+			self.tail = newNode
+		else:
+			self.tail.next = newNode
+			self.tail = newNode
+	#def
+
+
 		
 
 		
