@@ -49,7 +49,7 @@ class SList:
 	#def
 	
 	def inDanhSach(self):	#In ra danh sách
-		if self.head is None:
+		if self.head == None:
 			print("Chua co danh sach")
 			return
 		node = self.head

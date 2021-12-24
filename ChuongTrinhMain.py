@@ -12,7 +12,7 @@ def menu(self):
 
 def process(self):
     listKhoHang = SList()
-    luachon = -1
+    luachon = 1
     while luachon != 0:
         menu()
         print("\n")
@@ -20,8 +20,14 @@ def process(self):
         luachon = int(input())
 
         if luachon == 1:
-            listKhoHang.docFile()
+            if listKhoHang.docFile() == True:
+                print("Doc file thanh cong")
+            else:
+                print("Doc file that bai")
+        elif luachon == 2:
             listKhoHang.inDanhSach()
+        else:
+            return
 #def
 
 
@@ -29,5 +35,6 @@ def main(self):
     process()
 #def
 
-if __name__ == '__name__':
+if __name__ == '__main__':
     main()
+#if
