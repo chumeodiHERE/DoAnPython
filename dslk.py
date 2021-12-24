@@ -31,7 +31,7 @@ class list:
 		self.head = None
 		self.tail = None
 	
-	def inDS(self):
+	def inDanhSach(self):
 		pass
 		
 
