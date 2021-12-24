@@ -3,6 +3,7 @@ header = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^10}|{:^15}|{:^15}|{:^20}|".format(
 )
 
 row = "#{:-^10}#{:-^15}#{:-^20}#{:-^15}#{:-^10}#{:-^15}#{:-^15}#{:-^20}#".format("", "", "", "", "", "", "", "")
+
 class Date:
 	"""docstring for Date"""
 	def __init__(self, ngay, thang, nam):
@@ -46,8 +47,16 @@ class list:
 		self.tail = None
 	#def
 	
-	def inDanhSach(self):
-		pass
+	def inDanhSach(self):	#In ra danh sách
+		if self.head is None:
+			print("Chua co danh sach")
+			return
+		node = self.head
+		print(row)
+		print(header)
+		print(row)
+		while node is not None:
+			print(node.data.__str__())
 	#def
 
 	def themKhoHang(self, data):	#Thêm Kho hàng từ bàn phím
