@@ -1,6 +1,6 @@
 class Date(object):
 	"""docstring for Date"""
-	def __init__(self, ngay=None, thang=None, nam=None):
+	def __init__(self, ngay, thang, nam):
 		self.ngay = ngay
 		self.thang = thang
 		self.nam = nam
@@ -24,5 +24,12 @@ class Node:
 	def __init__(self, data, next):
 		self.data = data
 		self.next = None
+
+class list:
+	"""docstring for list"""
+	def __init__(self):
+		self.head = None
+		self.tail = None
+		
 
 		
