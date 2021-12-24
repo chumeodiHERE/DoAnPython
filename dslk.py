@@ -66,17 +66,17 @@ class SList:
 		newNode.next = self.head
 		self.head = newNode
 
-	def them1KhoHang(self):
-		maKH = input("Nhap ma Kho Hang: ")
-		tenKH = input("Nhap ten Kho Hang: ")
-		diaDiem = input("Nhap dia diem: ")
-		taiTrong = float(input("Nhap tai trong: "))
-		loaiHH = input("Nhap loai Hang Hoa: ")
-		dateNhap = input("Nhap ngay nhap hang: ")
-		dateXuat = input("Nhap ngay xuat hang: ")
-		taiTrongNhap = float(input("Nhap tai trong hang nhap vao kho: "))
-
-		self.createNode(KhoHang(maKH, tenKH, diaDiem, taiTrong, loaiHH, dateNhap, dateXuat, taiTrongNhap))
+	def them1KhoHang(slist):
+		data = ['1', '2', '3', 4.5, '5', '6', '7', 8.5]		#Đặt giá trị tượng trưng vì không muốn stack rỗng
+		data[0] = input("Nhap ma Kho Hang: ")
+		data[1] = input("Nhap ten Kho Hang: ")
+		data[2] = input("Nhap dia diem: ")
+		data[3] = float(input("Nhap tai trong: "))
+		data[4] = input("Nhap loai Hang Hoa: ")
+		data[5] = input("Nhap ngay nhap hang: ")
+		data[6] = input("Nhap ngay xuat hang: ")
+		data[7] = float(input("Nhap tai trong hang nhap vao kho: "))
+		slist.addHead(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 		print("THEM THANH CONG!!")
 	#def
 
