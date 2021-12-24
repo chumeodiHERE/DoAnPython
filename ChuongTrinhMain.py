@@ -1,16 +1,15 @@
 from dslk import *
 
-def menu(self):
+def menu():
     print("#------------------------------------------------#")
     print("|                      MENU                      |")
     print("#------------------------------------------------#")
     print("|    1. Doc du lieu tu file                      |")
     print("|    2. Hien thi tat ca thong tin kho            |")
-    print("|    3. them 1 xe X vao stack                    |")
     print("|    0.                THOAT                     |")
 #def
 
-def process(self):
+def process():
     listKhoHang = SList()
     luachon = 1
     while luachon != 0:
@@ -27,11 +26,11 @@ def process(self):
         elif luachon == 2:
             listKhoHang.inDanhSach()
         else:
-            return
+            return 0
 #def
 
 
-def main(self):
+def main():
     process()
 #def
 
