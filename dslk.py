@@ -71,7 +71,7 @@ class SList:
 			datalist = f.readlines()
 			for line in datalist:
 				data = line.split()
-				if len(data) is 8:
+				if len(data) == 8:
 					linkedList.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 			f.close()
 			return True
