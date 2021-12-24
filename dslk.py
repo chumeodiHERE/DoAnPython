@@ -1,7 +1,8 @@
-head = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^10}|{:^15}|{:^15}|{:^20}|".format(
+header = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^10}|{:^15}|{:^15}|{:^20}|".format(
     "MA KHO", "TEN KHO", "DIA DIEM", "TAI TRONG(KG)", "LOAI", "DATE NHAP", "DATE XUAT", "TAI TRONG NHAP(KG)"
 )
 
+row = "#{:-^10}#{:-^15}#{:-^20}#{:-^15}#{:-^10}#{:-^15}#{:-^15}#{:-^20}#".format("", "", "", "", "", "", "", "")
 class Date:
 	"""docstring for Date"""
 	def __init__(self, ngay, thang, nam):
@@ -25,7 +26,9 @@ class KhoHang:
 	#def
 
 	def __str__(self):
-		pass
+		return "|{:^10}|{:^15}|{:^20}|{:^15}|{:^10}|{:^15}|{:^15}|{:^20}|".format(
+            self.maKhoHang, self.tenKhoHang, self.diaDiem, self.taiTrong, self.loaiHHoa, self.dateNhapHang.ngay +"-"+self.dateNhapHang.thang+"-"+self.dateNhapHang.nam, self.dateXuatHang.ngay+"-"+self.dateXuatHang.thang+"-"+self.dateXuatHang.nam, self.taiTrongNhap
+        )
 	#def
 		
 
