@@ -4,6 +4,7 @@ class Date:
 		self.ngay = ngay
 		self.thang = thang
 		self.nam = nam
+	#def
 		
 
 class KhoHang:
@@ -14,25 +15,29 @@ class KhoHang:
 		self.diaDiem = diaDiem
 		self.taiTrong = taiTrong
 		self.loaiHHoa = loaiHHoa
-		self.dateNhapHang = dateNhapHang
-		self.dateXuatHang = dateXuatHang
+		self.dateNhapHang = Date()
+		self.dateXuatHang = Date()
 		self.taiTrongNhap = taiTrongNhap
+	#def
 		
 
 class Node:
 	"""docstring for Node"""
 	def __init__(self, data, next):
-		self.data = data
+		self.data = KhoHang()
 		self.next = None
+	#def
 
 class list:
 	"""docstring for list"""
 	def __init__(self):
 		self.head = None
 		self.tail = None
+	#def
 	
 	def inDanhSach(self):
 		pass
+	#def
 		
 
 		
