@@ -1,3 +1,4 @@
+from typing import List
 from dslk import *
 
 def menu(self):
@@ -5,5 +6,5 @@ def menu(self):
 #def
 
 def process(self):
-    listKhoHang = list()
+    listKhoHang = List()
 #def
