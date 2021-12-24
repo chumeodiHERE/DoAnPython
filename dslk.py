@@ -38,7 +38,7 @@ class SList:
 		self.tail = None
 	#def
 	
-	def createNode(self, data):		#Hàm để tạo node mới
+	def createNode(self, data):		#Hàm để tạo node mới (Them cuối)
 		newNode = Node(data)
 		if self.head == None:
 			self.head = newNode
@@ -61,18 +61,35 @@ class SList:
 			node = node.next
 		print(row)
 	#def
+	def addHead(self, data):
+		newNode = Node(data)
+		newNode.next = self.head
+		self.head = newNode
 
-	
+	def them1KhoHang(self):
+		maKH = input("Nhap ma Kho Hang: ")
+		tenKH = input("Nhap ten Kho Hang: ")
+		diaDiem = input("Nhap dia diem: ")
+		taiTrong = float(input("Nhap tai trong: "))
+		loaiHH = input("Nhap loai Hang Hoa: ")
+		dateNhap = input("Nhap ngay nhap hang: ")
+		dateXuat = input("Nhap ngay xuat hang: ")
+		taiTrongNhap = float(input("Nhap tai trong hang nhap vao kho: "))
 
-	def docFile(linkedList):
+		self.createNode(KhoHang(maKH, tenKH, diaDiem, taiTrong, loaiHH, dateNhap, dateXuat, taiTrongNhap))
+		print("THEM THANH CONG!!")
+	#def
+
+	def docFile(slist):
 		try:
 			f = open('ThTinKho.txt', 'r')
 			datalist = f.readlines()
 			for line in datalist:
 				data = line.split()
 				if len(data) == 8:
-					linkedList.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
+					slist.addHead(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 			f.close()
+			print("Doc file thanh cong!!")
 			return True
 		except:
 			return False

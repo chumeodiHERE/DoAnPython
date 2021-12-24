@@ -6,7 +6,9 @@ def menu():
     print("#------------------------------------------------#")
     print("|    1. Doc du lieu tu file                      |")
     print("|    2. Hien thi tat ca thong tin kho            |")
+    print("|    3. Them 1 Kho Hang                          |")
     print("|    0.                THOAT                     |")
+    print("|________________________________________________|")
 #def
 
 def process():
@@ -15,16 +17,13 @@ def process():
     while luachon != 0:
         menu()
         print("\n")
-        print(">> Nhap chuc nang: ")
-        luachon = int(input())
-
+        luachon = int(input(">> Nhap chuc nang: "))
         if luachon == 1:
-            if listKhoHang.docFile() == True:
-                print("Doc file thanh cong")
-            else:
-                print("Doc file that bai")
+            listKhoHang.docFile()
         elif luachon == 2:
             listKhoHang.inDanhSach()
+        elif luachon == 3:
+            listKhoHang.them1KhoHang()
         else:
             return 0
 #def
