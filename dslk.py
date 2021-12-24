@@ -6,7 +6,6 @@ row = "#{:-^10}#{:-^15}#{:-^20}#{:-^15}#{:-^10}#{:-^15}#{:-^15}#{:-^20}#".format
 
 
 class KhoHang:
-	"""docstring for KhoHang"""
 	def __init__(self, maKhoHang, tenKhoHang, diaDiem, taiTrong, loaiHHoa, dateNhapHang, dateXuatHang, taiTrongNhap):
 		self.maKhoHang = maKhoHang
 		self.tenKhoHang = tenKhoHang
@@ -23,17 +22,17 @@ class KhoHang:
             self.maKhoHang, self.tenKhoHang, self.diaDiem, self.taiTrong, self.loaiHHoa, self.dateNhapHang, self.dateXuatHang, self.taiTrongNhap
         )
 	#def
+#class
 		
 
 class Node:
-	"""docstring for Node"""
 	def __init__(self, data):
 		self.data = data
 		self.next = None
 	#def
+#class
 
 class SList:
-	"""docstring for list"""
 	def __init__(self):
 		self.head = None
 		self.tail = None
@@ -78,7 +77,7 @@ class SList:
 		except:
 			return False
 	#def
-
+#class
 
 
 		
