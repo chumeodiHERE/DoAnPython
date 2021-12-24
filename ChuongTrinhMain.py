@@ -1,10 +1,8 @@
 from menuAndprocess import *
 
 def main(self):
-    lst = list()
-    
-
-
+    process()
+#def
 
 if __name__ == '__name__':
     main()

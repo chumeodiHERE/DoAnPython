@@ -13,18 +13,18 @@ class KhoHang:
 		self.maKhoHang = maKhoHang
 		self.tenKhoHang = tenKhoHang
 		self.diaDiem = diaDiem
-		self.taiTrong = taiTrong
+		self.taiTrong = int(taiTrong)
 		self.loaiHHoa = loaiHHoa
-		self.dateNhapHang = Date()
-		self.dateXuatHang = Date()
-		self.taiTrongNhap = taiTrongNhap
+		self.dateNhapHang = Date(dateNhapHang)
+		self.dateXuatHang = Date(dateXuatHang)
+		self.taiTrongNhap = int(taiTrongNhap)
 	#def
 		
 
 class Node:
 	"""docstring for Node"""
-	def __init__(self, data, next):
-		self.data = KhoHang()
+	def __init__(self, data):
+		self.data = data
 		self.next = None
 	#def
 
