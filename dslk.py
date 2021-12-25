@@ -103,6 +103,22 @@ class SList:
 			return False
 	# #def
 
+
+	def __sort__(self):	#In ra danh sách
+		if self.head == None:
+			print("Chua co danh sach")
+			return None
+		else:
+			datap = self.head
+			while datap != None:
+				dataq = datap.next
+				while dataq != None:
+					if datap.data.taiTrong < dataq.data.taiTrong:
+						datap.data, dataq.data = dataq.data, datap.data
+					dataq = dataq.next
+				datap = datap.next
+			print("Success")
+	# #def
 #class
 
 

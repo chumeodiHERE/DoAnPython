@@ -24,6 +24,8 @@ def process():
             listKhoHang.inDanhSach()
         elif luachon == 3:
             listKhoHang.ghiFile()
+        elif luachon == 4:
+            listKhoHang.__sort__()
         else:
             return 0
 #def
