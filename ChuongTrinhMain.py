@@ -6,7 +6,7 @@ def menu():
     print("#------------------------------------------------#")
     print("|    1. Doc du lieu tu file                      |")
     print("|    2. Hien thi tat ca thong tin kho            |")
-    print("|    3. Them 1 Kho Hang                          |")
+    print("|    3. Them 1 Kho Hang va luu vao file          |")
     print("|    0.                THOAT                     |")
     print("|________________________________________________|")
 #def
@@ -24,6 +24,7 @@ def process():
             listKhoHang.inDanhSach()
         elif luachon == 3:
             listKhoHang.them1KhoHang()
+            # listKhoHang.ghiFile()
         else:
             return 0
 #def

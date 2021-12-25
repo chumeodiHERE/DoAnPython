@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-header = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^10}|{:^15}|{:^15}|{:^20}|".format(
+header = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^15}|{:^15}|{:^15}|{:^20}|".format(
     "MA KHO", "TEN KHO", "DIA DIEM", "TAI TRONG(KG)", "LOAI", "DATE NHAP", "DATE XUAT", "TAI TRONG NHAP(KG)"
 )
 
-row = "#{:-^10}#{:-^15}#{:-^20}#{:-^15}#{:-^10}#{:-^15}#{:-^15}#{:-^20}#".format("", "", "", "", "", "", "", "")
+row = "#{:-^10}#{:-^15}#{:-^20}#{:-^15}#{:-^15}#{:-^15}#{:-^15}#{:-^20}#".format("", "", "", "", "", "", "", "")
 
 
 class KhoHang:
@@ -19,7 +19,7 @@ class KhoHang:
 	#def
 
 	def __str__(self):
-		return "|{:^10}|{:^15}|{:^20}|{:^15}|{:^10}|{:^15}|{:^15}|{:^20}|".format(
+		return "|{:^10}|{:^15}|{:^20}|{:^15}|{:^15}|{:^15}|{:^15}|{:^20}|".format(
             self.maKhoHang, self.tenKhoHang, self.diaDiem, self.taiTrong, self.loaiHHoa, self.dateNhapHang, self.dateXuatHang, self.taiTrongNhap
         )
 	#def
@@ -63,7 +63,7 @@ class SList:
 		print(row)
 
 	def them1KhoHang(slist):
-		data = ['1', '2', '3', 4.5, '5', '6', '7', 8.5]		#Đặt giá trị tượng trưng vì không muốn stack rỗng
+		data = ['1', '2', '3', 4.5, '5', '6', '7', 8.5]		#Đặt giá trị tượng trưng vì không muốn list rỗng
 		data[0] = input("Nhap ma Kho Hang: ")
 		data[1] = input("Nhap ten Kho Hang: ")
 		data[2] = input("Nhap dia diem: ")
@@ -73,7 +73,7 @@ class SList:
 		data[6] = input("Nhap ngay xuat hang: ")
 		data[7] = float(input("Nhap tai trong hang nhap vao kho: "))
 		slist.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
-		print("THEM THANH CONG!!")
+		# return data
 	#def
 
 	def docFile(slist):
@@ -90,6 +90,19 @@ class SList:
 		except:
 			return False
 	#def
+
+	# def ghiFile(slist):
+	# 	try:
+	# 		node = slist.them1KhoHang()		#Node trở thành 1 list chứa các thuộc tính của đối tượng vừa thêm
+	# 		f = open('ThTinKho.txt', 'a')
+	# 		f.write("{} {} {} {} {} {} {} {}\n".format(node[0], node[1], node[2], node[3], node[4], node[5], node[6], node[7]))
+	# 		f.close()
+	# 		print(">> Them va luu kho thanh cong!! <<")
+	# 		return True
+	# 	except:
+	# 		return False
+	# #def
+
 #class
 
 
