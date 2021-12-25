@@ -45,7 +45,7 @@ class SList:
 			self.tail = newNode
 		else:
 			self.tail.next = newNode
-			self.tail = newNode
+			self.tail = newNode 
 	#def
 	
 	def inDanhSach(self):	#In ra danh sách
@@ -60,11 +60,6 @@ class SList:
 			print(node.data.__str__())
 			node = node.next
 		print(row)
-	#def
-	def addHead(self, data):
-		newNode = Node(data)
-		newNode.next = self.head
-		self.head = newNode
 
 	def them1KhoHang(slist):
 		data = ['1', '2', '3', 4.5, '5', '6', '7', 8.5]		#Đặt giá trị tượng trưng vì không muốn stack rỗng
@@ -76,7 +71,7 @@ class SList:
 		data[5] = input("Nhap ngay nhap hang: ")
 		data[6] = input("Nhap ngay xuat hang: ")
 		data[7] = float(input("Nhap tai trong hang nhap vao kho: "))
-		slist.addHead(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
+		slist.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 		print("THEM THANH CONG!!")
 	#def
 
@@ -87,7 +82,7 @@ class SList:
 			for line in datalist:
 				data = line.split()
 				if len(data) == 8:
-					slist.addHead(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
+					slist.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 			f.close()
 			print("Doc file thanh cong!!")
 			return True
