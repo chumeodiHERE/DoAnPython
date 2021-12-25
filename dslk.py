@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 header = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^15}|{:^15}|{:^15}|{:^20}|".format(
     "MA KHO", "TEN KHO", "DIA DIEM", "TAI TRONG(KG)", "LOAI", "DATE NHAP", "DATE XUAT", "TAI TRONG NHAP(KG)"
 )
@@ -64,13 +64,13 @@ class SList:
 
 	def them1KhoHang(slist):
 		data = ['1', '2', '3', 4.5, '5', '6', '7', 8.5]		#Đặt giá trị tượng trưng vì không muốn list rỗng
-		data[0] = input("Nhap ma Kho Hang: ")
-		data[1] = input("Nhap ten Kho Hang: ")
-		data[2] = input("Nhap dia diem: ")
+		data[0] = str(input("Nhap ma Kho Hang: "))
+		data[1] = str(input("Nhap ten Kho Hang: "))
+		data[2] = str(input("Nhap dia diem: "))
 		data[3] = float(input("Nhap tai trong: "))
-		data[4] = input("Nhap loai Hang Hoa: ")
-		data[5] = input("Nhap ngay nhap hang: ")
-		data[6] = input("Nhap ngay xuat hang: ")
+		data[4] = str(input("Nhap loai Hang Hoa: "))
+		data[5] = str(input("Nhap ngay nhap hang: "))
+		data[6] = str(input("Nhap ngay xuat hang: "))
 		data[7] = float(input("Nhap tai trong hang nhap vao kho: "))
 		slist.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 		# return data
