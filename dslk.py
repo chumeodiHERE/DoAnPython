@@ -73,12 +73,12 @@ class SList:
 		data[6] = str(input("Nhap ngay xuat hang: "))
 		data[7] = float(input("Nhap tai trong hang nhap vao kho: "))
 		slist.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
-		# return data
+		return data
 	#def
 
 	def docFile(slist):
 		try:
-			f = open('ThTinKho.txt', 'r')
+			f = open('ThTinKho.txt', mode ='r+')
 			datalist = f.readlines()
 			for line in datalist:
 				data = line.split()
@@ -91,16 +91,16 @@ class SList:
 			return False
 	#def
 
-	# def ghiFile(slist):
-	# 	try:
-	# 		node = slist.them1KhoHang()		#Node trở thành 1 list chứa các thuộc tính của đối tượng vừa thêm
-	# 		f = open('ThTinKho.txt', 'a')
-	# 		f.write("{} {} {} {} {} {} {} {}\n".format(node[0], node[1], node[2], node[3], node[4], node[5], node[6], node[7]))
-	# 		f.close()
-	# 		print(">> Them va luu kho thanh cong!! <<")
-	# 		return True
-	# 	except:
-	# 		return False
+	def ghiFile(slist):
+ 		try:
+	 		node = slist.them1KhoHang()		#Node trở thành 1 list chứa các thuộc tính của đối tượng vừa thêm
+	 		f = open('ThTinKho.txt', mode ='a+')
+	 		f.write("\n{} {} {} {} {} {} {} {}".format(node[0], node[1], node[2], node[3], node[4], node[5], node[6], node[7]))
+	 		f.close()
+	 		print(">> Them va luu kho thanh cong!! <<")
+	 		return True
+	 	except:
+	 		return False
 	# #def
 
 #class

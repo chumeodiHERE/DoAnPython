@@ -23,8 +23,7 @@ def process():
         elif luachon == 2:
             listKhoHang.inDanhSach()
         elif luachon == 3:
-            listKhoHang.them1KhoHang()
-            # listKhoHang.ghiFile()
+            listKhoHang.ghiFile()
         else:
             return 0
 #def
