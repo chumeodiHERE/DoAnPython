@@ -1,4 +1,3 @@
-
 header = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^15}|{:^15}|{:^15}|{:^20}|".format(
     "MA KHO", "TEN KHO", "DIA DIEM", "TAI TRONG(KG)", "LOAI", "DATE NHAP", "DATE XUAT", "TAI TRONG NHAP(KG)"
 )
@@ -37,6 +36,7 @@ class SList:
 	def __init__(self):
 		self.head = None
 		self.tail = None
+		self.size = 0
 	#def
 	
 	def createNode(self, data):		#Hàm để tạo node mới (Them cuối)
@@ -44,9 +44,11 @@ class SList:
 		if self.head == None:
 			self.head = newNode
 			self.tail = newNode
+			self.size += 1
 		else:
 			self.tail.next = newNode
 			self.tail = newNode 
+			self.size += 1
 	#def
 	
 	def inDanhSach(self):	#In ra danh sách
@@ -61,6 +63,7 @@ class SList:
 			print(node.data.__str__())
 			node = node.next
 		print(row)
+	#def
 
 	def them1KhoHang(slist):
 		data = ['1', '2', '3', 4.5, '5', '6', '7', 8.5]		#Đặt giá trị tượng trưng vì không muốn list rỗng
@@ -101,6 +104,7 @@ class SList:
 			return True
 		except:
 			return False
+<<<<<<< HEAD
 	# #def
 
 
@@ -119,6 +123,9 @@ class SList:
 				datap = datap.next
 			print("Success")
 	# #def
+=======
+	#def
+>>>>>>> 81749d78a184168c4e9d45e40f18520fb44f30e0
 #class
 
 

@@ -7,6 +7,7 @@ def menu():
     print("|    1. Doc du lieu tu file                      |")
     print("|    2. Hien thi tat ca thong tin kho            |")
     print("|    3. Them 1 Kho Hang va luu vao file          |")
+    print("|    4. Sap xep Kho Hang theo Tai Trong          |")
     print("|    0.                THOAT                     |")
     print("|________________________________________________|")
 #def
