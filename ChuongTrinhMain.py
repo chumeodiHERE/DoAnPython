@@ -23,6 +23,7 @@ def process():
         elif luachon == 2:
             listKhoHang.inDanhSach()
         elif luachon == 3:
+            print("Fuckk")
             listKhoHang.ghiFile()
         else:
             return 0
