@@ -147,12 +147,30 @@ class SList:
 			return None
 		else:
 			dateNhapHang = '/10/2021'
+			print("\t\t\t\t\tDANH SACH KHO HANG NHAP VAO THANG 10/2021")
 			node = self.head
 			print(row)
 			print(header)
 			print(row)
 			while node != None:
 				if dateNhapHang in node.data.dateNhapHang:
+					print(node.data.__str__())
+				node = node.next
+			print(row)
+			return None
+	#def
+
+	def findKhoTrong(self):		#Hàm tìm các kho còn trống (tải trọng nhập < tải trọng sẵn có của kho)
+		if self.head == None:
+			return None
+		else:
+			node = self.head
+			print("\t\t\t\t\t\tDANH SACH KHO HANG CON TRONG")
+			print(row)
+			print(header)
+			print(row)
+			while node != None:
+				if node.data.taiTrongNhap < node.data.taiTrong:
 					print(node.data.__str__())
 				node = node.next
 			print(row)
