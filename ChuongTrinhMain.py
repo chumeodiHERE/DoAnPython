@@ -9,6 +9,7 @@ def menu():
     print("|    3. Them 1 Kho Hang va luu vao file          |")
     print("|    4. Sap xep Kho Hang theo Tai Trong          |")
     print("|    5. Xoa kho hang dua theo maKH (xoa bat ki)  |")
+    print("|    6. Tim kho hang nhap vao 10/2021            |")
     print("|    0.                THOAT                     |")
     print("|________________________________________________|")
 #def
@@ -29,8 +30,10 @@ def process():
         elif luachon == 4:
             listKhoHang.__sort__()
         elif luachon == 5:
-            maKH = str(input("Nhap ma KH can xoa: "))
+            maKH = str(input("Nhap ma Kho Hang can xoa: "))
             listKhoHang.deleteKho(maKH)
+        elif luachon == 6:
+            listKhoHang.findKhoTh10()
         else:
             return 0
 #def

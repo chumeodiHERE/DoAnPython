@@ -142,10 +142,22 @@ class SList:
 		return None
 	#def
 
-
-
-
-
+	def findKhoTh10(self):		#Hàm tìm các kho được nhập vào tháng 10/2021
+		if self.head == None:
+			return None
+		else:
+			dateNhapHang = '/10/2021'
+			node = self.head
+			print(row)
+			print(header)
+			print(row)
+			while node != None:
+				if dateNhapHang in node.data.dateNhapHang:
+					print(node.data.__str__())
+				node = node.next
+			print(row)
+			return None
+	#def
 #class
 
 
