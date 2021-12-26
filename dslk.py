@@ -77,7 +77,7 @@ class SList:
 		slist.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 		return data
 	#def
-	def Add_Kho(self):
+	def Add_Kho(self):										#Hàm dùng cho add theo tải trọng
 		data = ['1', '2', '3', 4.5, '5', '6', '7', 8.5]		#Đặt giá trị tượng trưng vì không muốn list rỗng
 		data[0] = str(input("Nhap ma Kho Hang: "))
 		data[1] = str(input("Nhap ten Kho Hang: "))
@@ -233,7 +233,7 @@ class SList:
 			return None
 	#def
 
-	def __AddSort__(self):
+	def __AddSort__(self):				#Hàm thêm kho hàng theo tải trọng
 		self.__sort__()
 		if self.head == None:
 			return None
