@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-header = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^15}|{:^15}|{:^15}|{:^20}|".format(
+header = "|{:^15}|{:^15}|{:^20}|{:^15}|{:^15}|{:^15}|{:^15}|{:^20}|".format(
     "MA KHO", "TEN KHO", "DIA DIEM", "TAI TRONG(KG)", "LOAI", "DATE NHAP", "DATE XUAT", "TAI TRONG NHAP(KG)"
 )
 
-row = "#{:-^10}#{:-^15}#{:-^20}#{:-^15}#{:-^15}#{:-^15}#{:-^15}#{:-^20}#".format("", "", "", "", "", "", "", "")
+row = "#{:-^15}#{:-^15}#{:-^20}#{:-^15}#{:-^15}#{:-^15}#{:-^15}#{:-^20}#".format("", "", "", "", "", "", "", "")
 
 
 class KhoHang:
@@ -19,7 +19,7 @@ class KhoHang:
 	#def
 
 	def __str__(self):
-		return "|{:^10}|{:^15}|{:^20}|{:^15}|{:^15}|{:^15}|{:^15}|{:^20}|".format(
+		return "|{:^15}|{:^15}|{:^20}|{:^15}|{:^15}|{:^15}|{:^15}|{:^20}|".format(
             self.maKhoHang, self.tenKhoHang, self.diaDiem, self.taiTrong, self.loaiHHoa, self.dateNhapHang, self.dateXuatHang, self.taiTrongNhap
         )
 	#def
@@ -251,8 +251,8 @@ class SList:
 					self.tail = pnew
 					return
 			while p != None:
-				if pnew.data.taiTrong < q.data.taiTrong:
-					if pnew.data.taiTrong > p.data.taiTrong: break
+				if pnew.data.taiTrong < p.data.taiTrong:
+					if pnew.data.taiTrong > q.data.taiTrong: break
 				q = p
 				p = p.next
 			if p == None: return
