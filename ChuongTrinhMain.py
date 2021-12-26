@@ -45,6 +45,9 @@ def process():
             listKhoHang.findHangDongLanh()
         elif luachon == 9:
             listKhoHang.avgKhoDN()
+        elif luachon == 11:
+            add_obj = listKhoHang.Add_Kho()
+            listKhoHang.__AddSort__(add_obj)
         else:
             return 0
 #def
