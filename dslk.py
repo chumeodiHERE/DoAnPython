@@ -48,6 +48,10 @@ class SList:
 			self.tail.next = newNode
 			self.tail = newNode
 		return newNode 
+
+	def createpNode(self, data):		#Hàm để tạo node mới (Them cuối)
+		newNode = Node(data)
+		return newNode 
 	#def
 	
 	def inDanhSach(self):	#In ra danh sách
@@ -87,7 +91,7 @@ class SList:
 		data[5] = str(input("Nhap ngay nhap hang: "))
 		data[6] = str(input("Nhap ngay xuat hang: "))
 		data[7] = float(input("Nhap tai trong hang nhap vao kho: "))
-		data = self.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
+		data = self.createpNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 		return data
 
 	def docFile(slist):
@@ -233,20 +237,19 @@ class SList:
 			return None
 	#def
 
-	def __AddSort__(self):				#Hàm thêm kho hàng theo tải trọng
-		self.__sort__()
+	def __AddSort__(self,add_obj):				#Hàm thêm kho hàng theo tải trọng
 		if self.head == None:
 			return None
 		else:
 			p = self.head
-			pnew = self.Add_Kho()
-			q = p.next
+			pnew = add_obj
+			q = p
 			while p != None:
-				if pnew.data.taiTrong > p.data.taiTrong:
+				if pnew.data.taiTrong > self.head.data.taiTrong:
 					pnew.next = self.head
 					self.head = pnew
 					return
-				if pnew.data.taiTrong < self.tail.taiTrong:
+				if pnew.data.taiTrong < self.tail.data.taiTrong:
 					self.tail.next = pnew
 					self.tail = pnew
 					return
