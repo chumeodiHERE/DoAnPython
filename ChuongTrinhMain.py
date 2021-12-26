@@ -13,6 +13,7 @@ def menu():
     print("|    7. Tim cac kho hang con trong               |")
     print("|    8. Tim cac kho hang dong lanh               |")
     print("|    9. Tinh tai trong tb cua kho hang DONG NAI  |")
+    print("|    10. Dem so kho hang co ten bat dau la 'KH'  |")
     print("|    0.                THOAT                     |")
     print("|________________________________________________|")
 #def
@@ -45,9 +46,14 @@ def process():
             listKhoHang.findHangDongLanh()
         elif luachon == 9:
             listKhoHang.avgKhoDN()
+<<<<<<< HEAD
         elif luachon == 11:
             add_obj = listKhoHang.Add_Kho()
             listKhoHang.__AddSort__(add_obj)
+=======
+        elif luachon == 10:
+            listKhoHang.countKhoHangKH()
+>>>>>>> a000a27eef295bb131fb533fc34e709a8f25971d
         else:
             return 0
 #def
