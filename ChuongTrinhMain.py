@@ -14,6 +14,7 @@ def menu():
     print("|    8. Tim cac kho hang dong lanh               |")
     print("|    9. Tinh tai trong tb cua kho hang DONG NAI  |")
     print("|    10. Dem so kho hang co ten bat dau la 'KH'  |")
+    print("|    11. Them Kho hang dua vao tai trong         |")
     print("|    0.                THOAT                     |")
     print("|________________________________________________|")
 #def
@@ -49,8 +50,7 @@ def process():
         elif luachon == 10:
             listKhoHang.countKhoHangKH()
         elif luachon == 11:
-            add_obj = listKhoHang.Add_Kho()
-            listKhoHang.__AddSort__(add_obj)
+            listKhoHang.__AddSort__()
         else:
             return 0
 #def

@@ -46,7 +46,8 @@ class SList:
 			self.tail = newNode
 		else:
 			self.tail.next = newNode
-			self.tail = newNode 
+			self.tail = newNode
+		return newNode 
 	#def
 	
 	def inDanhSach(self):	#In ra danh sách
@@ -76,7 +77,7 @@ class SList:
 		slist.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 		return data
 	#def
-	def Add_Kho(slist):
+	def Add_Kho(self):
 		data = ['1', '2', '3', 4.5, '5', '6', '7', 8.5]		#Đặt giá trị tượng trưng vì không muốn list rỗng
 		data[0] = str(input("Nhap ma Kho Hang: "))
 		data[1] = str(input("Nhap ten Kho Hang: "))
@@ -86,6 +87,7 @@ class SList:
 		data[5] = str(input("Nhap ngay nhap hang: "))
 		data[6] = str(input("Nhap ngay xuat hang: "))
 		data[7] = float(input("Nhap tai trong hang nhap vao kho: "))
+		data = self.createNode(KhoHang(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]))
 		return data
 
 	def docFile(slist):
@@ -231,27 +233,31 @@ class SList:
 			return None
 	#def
 
-	def __AddSort__(self, add_obj):
-		pnew = Node(add_obj)
-		p = self.head
-		q = p
-		if pnew.data.taiTrong > p.data.taiTrong:
-			pnew.next = self.head
-			self.head = pnew
-			return
-		if pnew.data.taiTrong < self.tail.taiTrong:
-			self.tail.next = pnew
-			self.tail = pnew
-			return
-		while p != None:
-			if pnew.data.taiTrong < q.data.taiTrong:
-				if pnew.data.taiTrong > p.data.taiTrong: break
-			q = p
-			p = p.next
-		if p == None: return
-		pnew.next = q.next
-		q.next = pnew
-
+	def __AddSort__(self):
+		self.__sort__()
+		if self.head == None:
+			return None
+		else:
+			p = self.head
+			pnew = self.Add_Kho()
+			q = p.next
+			while p != None:
+				if pnew.data.taiTrong > p.data.taiTrong:
+					pnew.next = self.head
+					self.head = pnew
+					return
+				if pnew.data.taiTrong < self.tail.taiTrong:
+					self.tail.next = pnew
+					self.tail = pnew
+					return
+			while p != None:
+				if pnew.data.taiTrong < q.data.taiTrong:
+					if pnew.data.taiTrong > p.data.taiTrong: break
+				q = p
+				p = p.next
+			if p == None: return
+			pnew.next = q.next
+			q.next = pnew
 	# def
 
 	def countKhoHangKH(self):			#Đếm số kho hàng có tên bắt đầu bằng ký tự 'KH'
