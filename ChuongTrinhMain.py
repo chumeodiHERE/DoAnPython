@@ -11,6 +11,7 @@ def menu():
     print("|    5. Xoa kho hang dua theo maKH (xoa bat ki)  |")
     print("|    6. Tim kho hang nhap vao 10/2021            |")
     print("|    7. Tim cac kho hang con trong               |")
+    print("|    8. Tim cac kho hang dong lanh               |")
     print("|    0.                THOAT                     |")
     print("|________________________________________________|")
 #def
@@ -39,6 +40,8 @@ def process():
             listKhoHang.findKhoTh10()
         elif luachon == 7:
             listKhoHang.findKhoTrong()
+        elif luachon == 8:
+            listKhoHang.findHangDongLanh()
         else:
             return 0
 #def

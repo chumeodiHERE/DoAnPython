@@ -176,6 +176,24 @@ class SList:
 			print(row)
 			return None
 	#def
+
+	def findHangDongLanh(self):
+		if self.head == None:
+			return None
+		else:
+			loaiDongLanh = 'Dong-Lanh'
+			node = self.head
+			print("\t\t\t\t\t\tDANH SACH KHO HANG DONG LANH")
+			print(row)
+			print(header)
+			print(row)
+			while node != None:
+				if loaiDongLanh in node.data.loaiHHoa:
+					print(node.data.__str__())
+				node = node.next
+			print(row)
+			return None
+	#def
 #class
 
 
