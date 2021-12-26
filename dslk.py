@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 header = "|{:^10}|{:^15}|{:^20}|{:^15}|{:^15}|{:^15}|{:^15}|{:^20}|".format(
     "MA KHO", "TEN KHO", "DIA DIEM", "TAI TRONG(KG)", "LOAI", "DATE NHAP", "DATE XUAT", "TAI TRONG NHAP(KG)"
 )
@@ -36,7 +37,6 @@ class SList:
 	def __init__(self):
 		self.head = None
 		self.tail = None
-		self.size = 0
 	#def
 	
 	def createNode(self, data):		#Hàm để tạo node mới (Them cuối)
@@ -44,11 +44,9 @@ class SList:
 		if self.head == None:
 			self.head = newNode
 			self.tail = newNode
-			self.size += 1
 		else:
 			self.tail.next = newNode
 			self.tail = newNode 
-			self.size += 1
 	#def
 	
 	def inDanhSach(self):	#In ra danh sách
@@ -104,28 +102,50 @@ class SList:
 			return True
 		except:
 			return False
-<<<<<<< HEAD
-	# #def
-
+	#def
 
 	def __sort__(self):	#In ra danh sách
 		if self.head == None:
 			print("Chua co danh sach")
 			return None
 		else:
-			datap = self.head
-			while datap != None:
-				dataq = datap.next
-				while dataq != None:
-					if datap.data.taiTrong < dataq.data.taiTrong:
-						datap.data, dataq.data = dataq.data, datap.data
-					dataq = dataq.next
-				datap = datap.next
-			print("Success")
-	# #def
-=======
+			data_p = self.head
+			while data_p != None:
+				data_q = data_p.next
+				while data_q != None:
+					if data_p.data.taiTrong < data_q.data.taiTrong:
+						data_p.data, data_q.data = data_q.data, data_p.data
+					data_q = data_q.next
+				data_p = data_p.next
+			print(">>Success<<")		
 	#def
->>>>>>> 81749d78a184168c4e9d45e40f18520fb44f30e0
+
+	def deleteKho(self, maKhoHang):
+		if self.head == None:
+			return None
+		else:
+			node = self.head
+			if node.data.maKhoHang == maKhoHang:
+				self.head = (
+					node.next
+				)
+				return node.data
+			while node.next != None:
+				if (
+					node.next.data.maKhoHang == maKhoHang
+				):
+					node.next = (
+						node.next.next
+					)
+					return node.data
+				node = node.next
+		return None
+	#def
+
+
+
+
+
 #class
 
 
