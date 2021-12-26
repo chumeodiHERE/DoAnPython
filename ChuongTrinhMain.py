@@ -32,6 +32,8 @@ def process():
         elif luachon == 5:
             maKH = str(input("Nhap ma Kho Hang can xoa: "))
             listKhoHang.deleteKho(maKH)
+            print("Danh sach sau khi xoa: ")
+            listKhoHang.inDanhSach()
         elif luachon == 6:
             listKhoHang.findKhoTh10()
         else:
