@@ -194,6 +194,31 @@ class SList:
 			print(row)
 			return None
 	#def
+
+	def avgKhoDN(self):
+		if self.head == None:
+			return None
+		else:
+			maKH = 'DONG-NAI'
+			sumTaiTrong = 0
+			count = 0
+			node = self.head
+			print("\t\t\t\t\t\tDANH SACH KHO HANG O DONG NAI")
+			print(row)
+			print(header)
+			print(row)
+			while node != None:
+				if maKH in node.data.maKhoHang:
+					print(node.data.__str__())
+					sumTaiTrong += node.data.taiTrong
+					count += 1
+				node = node.next
+			avg = sumTaiTrong / count
+			ketqua = round(avg, 2)
+			print(row)
+			print("\n\n>> Tai trong trung binh cua cac kho hang o DONG NAI: " + str(ketqua))
+			return None
+	#def
 #class
 
 
