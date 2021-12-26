@@ -46,14 +46,11 @@ def process():
             listKhoHang.findHangDongLanh()
         elif luachon == 9:
             listKhoHang.avgKhoDN()
-<<<<<<< HEAD
+        elif luachon == 10:
+            listKhoHang.countKhoHangKH()
         elif luachon == 11:
             add_obj = listKhoHang.Add_Kho()
             listKhoHang.__AddSort__(add_obj)
-=======
-        elif luachon == 10:
-            listKhoHang.countKhoHangKH()
->>>>>>> a000a27eef295bb131fb533fc34e709a8f25971d
         else:
             return 0
 #def

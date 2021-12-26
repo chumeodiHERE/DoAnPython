@@ -230,7 +230,7 @@ class SList:
 			print("\n\n>> Tai trong trung binh cua cac kho hang o DONG NAI: " + str(ketqua))
 			return None
 	#def
-<<<<<<< HEAD
+
 	def __AddSort__(self, add_obj):
 		pnew = Node(add_obj)
 		p = self.head
@@ -254,10 +254,6 @@ class SList:
 
 	# def
 
-			
-
-=======
-
 	def countKhoHangKH(self):			#Đếm số kho hàng có tên bắt đầu bằng ký tự 'KH'
 		if self.head == None:
 			return None
@@ -278,7 +274,6 @@ class SList:
 			print("\n\n>> Co " + str(count) + " kho hang bat dau bang KH")
 			return None
 	#def
->>>>>>> a000a27eef295bb131fb533fc34e709a8f25971d
 #class
 
 
