@@ -50,6 +50,7 @@ def process():
         elif luachon == 10:
             listKhoHang.countKhoHangKH()
         elif luachon == 11:
+            listKhoHang.__sort__()
             add_obj = listKhoHang.Add_Kho()
             listKhoHang.__AddSort__(add_obj)
         else:

@@ -238,29 +238,27 @@ class SList:
 	#def
 
 	def __AddSort__(self,add_obj):				#Hàm thêm kho hàng theo tải trọng
-		if self.head == None:
-			return None
-		else:
-			p = self.head
-			pnew = add_obj
-			q = p
-			while p != None:
-				if pnew.data.taiTrong > self.head.data.taiTrong:
-					pnew.next = self.head
-					self.head = pnew
-					return
-				if pnew.data.taiTrong < self.tail.data.taiTrong:
-					self.tail.next = pnew
-					self.tail = pnew
-					return
-			while p != None:
-				if pnew.data.taiTrong < p.data.taiTrong:
-					if pnew.data.taiTrong > q.data.taiTrong: break
+		p = self.head
+		pnew = add_obj
+		q = p
+		if pnew.data.taiTrong > self.head.data.taiTrong:
+			pnew.next = self.head
+			self.head = pnew
+			return
+		if pnew.data.taiTrong < self.tail.data.taiTrong:
+			self.tail.next = pnew
+			self.tail = pnew
+			return
+		while p != None:
+			if pnew.data.taiTrong < p.data.taiTrong and pnew.data.taiTrong > p.next.data.taiTrong:
 				q = p
-				p = p.next
-			if p == None: return
-			pnew.next = q.next
-			q.next = pnew
+				p = p.next 
+				break
+			p = p.next
+		if p == None: return
+		pnew.next = q.next
+		q.next = pnew
+		print(">>>>>>>>>> Add Successfully <<<<<<<<<<")
 	# def
 
 	def countKhoHangKH(self):			#Đếm số kho hàng có tên bắt đầu bằng ký tự 'KH'
@@ -282,7 +280,7 @@ class SList:
 			print(row)
 			print("\n\n>> Co " + str(count) + " kho hang bat dau bang KH")
 			return None
-	#def
+	#def 
 #class
 
 
