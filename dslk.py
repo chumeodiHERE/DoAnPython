@@ -134,7 +134,7 @@ class SList:
 						data_p.data, data_q.data = data_q.data, data_p.data
 					data_q = data_q.next
 				data_p = data_p.next
-			print(">>Success<<")		
+			print(">>Sort Successfully<<")		
 	#def
 
 	def deleteKho(self, maKhoHang):
